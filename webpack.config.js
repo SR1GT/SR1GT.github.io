@@ -1,12 +1,12 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
-    filename: "[name].[contenthash].js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
@@ -26,19 +26,16 @@ module.exports = {
     static: "./dist",
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: "自定义标题",
-    }),
     new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.js$/,
+        test: /\.js$/i,
         use: {
           loader: "babel-loader",
           options: {
@@ -50,15 +47,6 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         type: "asset/resource",
       },
-      // {
-      //   test: /\.jsx?$/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       presets: ['@babel/preset-env', '@babel/preset-react']
-      //     }
-      //   }
-      // }
     ],
   },
 };
