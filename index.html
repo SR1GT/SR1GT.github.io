@@ -4,22 +4,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="SRIGT(SR1GT)" />
+  <meta name="keywords" content="SRIGT, SR1GT, SRIGT's Homepage" />
+  <meta name="description" content="SRIGT's Homepage" />
   <title>SRIGT's Homepage</title>
   <link rel="shortcut icon" href="favicon.svg" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#201B19] text-[#dedede] m-0 p-0 cursor-default">
+<body class="bg-[#201b19] text-[#dedede] m-0 p-0 cursor-default">
+  <svg width="0" height="0">
+    <defs>
+      <mask id="gradientMask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+        <linearGradient id="gradient" x2="1" y2="0">
+          <stop offset="0" stop-color="white" stop-opacity="0" />
+          <stop offset="1" stop-color="white" stop-opacity="1" />
+        </linearGradient>
+        <rect width="1" height="1" fill="url(#gradient)" />
+      </mask>
+    </defs>
+  </svg>
+
   <!-- 导航栏 -->
   <nav class="relative bg-[#272220] w-full p-0">
     <!-- <nav class="bg-[#272220] w-full p-0 fixed top-0 z-10"> -->
     <ul class="text-[20px] w-4/5 mx-auto my-0 p-0">
-      <li class="cursor-pointer inline-block px-8 py-4 duration-100 hover:bg-[#e91e63]">首页</li>
-      <li class="cursor-pointer inline-block px-8 py-4 duration-100 hover:bg-[#e91e63]">关于</li>
-      <li class="cursor-pointer inline-block px-8 py-4 duration-100 hover:bg-[#e91e63]">博客</li>
-      <li class="cursor-pointer inline-block px-8 py-4 duration-100 hover:bg-[#e91e63]">联系</li>
+      <li class="cursor-pointer inline-block px-8 py-4 duration-100 hover:bg-[#e91e63]">
+        首页
+      </li>
+      <li class="cursor-pointer inline-block px-8 py-4 duration-100 hover:bg-[#e91e63]">
+        关于
+      </li>
+      <li class="cursor-pointer inline-block px-8 py-4 duration-100 hover:bg-[#e91e63]">
+        博客
+      </li>
+      <li class="cursor-pointer inline-block px-8 py-4 duration-100 hover:bg-[#e91e63]">
+        联系
+      </li>
     </ul>
-    <p class="absolute top-1/2 right-[5%] -translate-y-1/2 text-sm">欢迎来自<span id="location">远方</span>的访客</p>
+    <p class="absolute top-1/2 right-[5%] -translate-y-1/2 text-sm">
+      欢迎来自<span id="location">远方</span>的访客
+    </p>
   </nav>
 
   <!-- 主页 -->
@@ -44,37 +70,79 @@
     </div>
     <div class="w-1/3"></div>
     <div class="h-full flex justify-center items-center">
-      <svg width="0" height="0">
-        <defs>
-          <mask id="gradientMask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
-            <linearGradient id="gradient" x2="1" y2="0">
-              <stop offset="0" stop-color="white" stop-opacity="0" />
-              <stop offset="1" stop-color="white" stop-opacity="1" />
-            </linearGradient>
-            <rect width="1" height="1" fill="url(#gradient)" />
-          </mask>
-        </defs>
-      </svg>
-      <img src="./src/assets/coding.jpg" alt="image" class="w-full h-full object-cover"
-        style="mask: url(#gradientMask); opacity: 0; transition: opacity 1s ease-in-out;" />
+      <img src="./public/coding.jpg" alt="image" class="w-full h-full object-cover" style="
+            mask: url(#gradientMask);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+          " />
     </div>
   </section>
 
   <!-- 关于 -->
-  <section class="w-full h-[100vh] bg-red-500"></section>
+  <section class="relative w-full h-[100vh] flex flex-col justify-between items-center py-16">
+    <h1 class="text-[50px] font-bold tracking-wide z-[5]">关于我</h1>
+    <div class="flex justify-around items-start gap-4 w-4/5 z-[5]">
+      <div id="time-axis" class="w-1 h-[65vh] flex flex-col justify-around z-[5]" style="
+            background: linear-gradient(
+              to bottom,
+              #201b19,
+              #dedede 10%,
+              #dedede 90%,
+              #201b19
+            );
+          ">
+        <!-- 时间轴 -->
+        <button class="relative -translate-x-[0.375rem] outline-none p-2 rounded-full ring-[3px] ring-[#dedede]"
+          style="background-color: #201b19">
+          <span class="absolute top-1/2 left-8 -translate-y-1/2">2020</span>
+        </button>
+        <button class="relative -translate-x-[0.375rem] outline-none p-2 rounded-full ring-[3px] ring-[#dedede]"
+          style="background-color: #201b19">
+          <span class="absolute top-1/2 left-8 -translate-y-1/2">2021</span>
+        </button>
+        <button class="relative -translate-x-[0.375rem] outline-none p-2 rounded-full ring-[3px] ring-[#dedede]"
+          style="background-color: #201b19">
+          <span class="absolute top-1/2 left-8 -translate-y-1/2">2022</span>
+        </button>
+        <button class="relative -translate-x-[0.375rem] outline-none p-2 rounded-full ring-[3px] ring-[#dedede]"
+          style="background-color: #201b19">
+          <span class="absolute top-1/2 left-8 -translate-y-1/2">2023</span>
+        </button>
+        <button class="relative -translate-x-[0.375rem] outline-none p-2 rounded-full ring-[3px] ring-[#dedede]"
+          style="background-color: #201b19">
+          <span class="absolute top-1/2 left-8 -translate-y-1/2">2024</span>
+        </button>
+      </div>
+      <div id="descriptions"
+        class="flex flex-col justify-between items-center w-2/3 h-[65vh] px-8 py-16 bg-[#dedede] bg-opacity-20 rounded-xl z-[5]">
+        <p class="leading-relaxed" style="text-indent: 2em"></p>
+        <img src="" alt="icons" class="" style="opacity: 0; transition: opacity 1s ease-in-out" />
+      </div>
+    </div>
+    <img src="./public/programmer.jpg" alt="image" class="absolute top-0 right-0 w-2/3 h-full object-cover" style="
+          mask: url(#gradientMask);
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        " />
+    <!-- <img src="https://skillicons.dev/icons?i=html,css,js,ts,vue,react,nextjs,electron,less,tailwindcss,git,github,svg,pinia,redux,webpack,postman,vscode,powershell,windows,java,py,php,go,rust,spring,django,express,mysql,md&perline=10" alt="stack" style="opacity: 0; transition: opacity 1s ease-in-out;" /> -->
+  </section>
 
   <!-- 博客 -->
-  <section class="w-full h-[100vh] flex flex-col justify-between items-center py-16">
-    <h1 class="text-[50px] font-bold tracking-wide">博客</h1>
-    <ul id="blog-list" class="w-4/5 grid grid-cols-2 gap-16">
+  <section class="relative w-full h-[100vh] flex flex-col justify-between items-center py-16">
+    <h1 class="text-[50px] font-bold tracking-wide z-[5]">技术博客</h1>
+    <ul id="blog-list" class="w-4/5 grid grid-cols-2 gap-16 z-[5]">
       <li class="relative pl-[5.5rem] py-3 bg-[#42b883] rounded-lg cursor-pointer duration-300 hover:scale-[105%]">
         <div
           class="absolute -left-4 top-1/2 -translate-y-1/2 flex justify-center items-center w-[5.5rem] aspect-square bg-[#e3e3e3] rounded-full shadow-lg">
-          <img src="https://cn.vuejs.org/logo.svg" alt="vue" class="w-10 aspect-square" style="opacity: 0; transition: opacity 1s ease-in-out;" />
+          <img src="https://cn.vuejs.org/logo.svg" alt="vue" class="w-10 aspect-square"
+            style="opacity: 0; transition: opacity 1s ease-in-out" />
         </div>
         <div>
           <h2 class="text-xl mb-1">Vue3 + TypeScript</h2>
-          <p class="text-xs">基于 Vue3 最新特性，结合 TypeScript 强类型优势，构建高效、可维护的现代前端应用</p>
+          <p class="text-xs">
+            基于 Vue3 最新特性，结合 TypeScript
+            强类型优势，构建高效、可维护的现代前端应用
+          </p>
         </div>
       </li>
       <li class="relative pl-[5.5rem] py-3 bg-[#c7000b] rounded-lg cursor-pointer duration-300 hover:scale-[105%]">
@@ -82,7 +150,8 @@
           class="absolute -left-4 top-1/2 -translate-y-1/2 flex justify-center items-center w-[5.5rem] aspect-square bg-[#e3e3e3] rounded-full shadow-lg">
           <img
             src="https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/0603public/kf-arkui.png"
-            alt="ArkUI" class="w-[90px] aspect-square object-cover object-center" style="opacity: 0; transition: opacity 1s ease-in-out;" />
+            alt="ArkUI" class="w-[90px] aspect-square object-cover object-center"
+            style="opacity: 0; transition: opacity 1s ease-in-out" />
         </div>
         <div>
           <h2 class="text-xl mb-1">ArkUI & ArkTS</h2>
@@ -92,65 +161,141 @@
       <li class="relative pl-[5.5rem] py-3 bg-[#57c5dd] rounded-lg cursor-pointer duration-300 hover:scale-[105%]">
         <div
           class="absolute -left-4 top-1/2 -translate-y-1/2 flex justify-center items-center w-[5.5rem] aspect-square bg-[#e3e3e3] rounded-full shadow-lg">
-          <img src="https://react.dev/favicon-32x32.png" alt="React" style="opacity: 0; transition: opacity 1s ease-in-out;" />
+          <img src="https://react.dev/favicon-32x32.png" alt="React"
+            style="opacity: 0; transition: opacity 1s ease-in-out" />
         </div>
         <div>
           <h2 class="text-xl mb-1">React18</h2>
-          <p class="text-xs">通过虚拟 DOM 优化性能，并支持 JSX 语法，使开发者能够高效构建 Web 和移动应用</p>
+          <p class="text-xs">
+            通过虚拟 DOM 优化性能，并支持 JSX 语法，使开发者能够高效构建 Web
+            和移动应用
+          </p>
         </div>
       </li>
       <li class="relative pl-[5.5rem] py-3 bg-[#000000] rounded-lg cursor-pointer duration-300 hover:scale-[105%]">
         <div
           class="absolute -left-4 top-1/2 -translate-y-1/2 flex justify-center items-center w-[5.5rem] aspect-square bg-[#e3e3e3] rounded-full shadow-lg">
-          <img src="https://nextjs.org/favicon.ico" alt="NextJS" style="opacity: 0; transition: opacity 1s ease-in-out;" />
+          <img src="https://nextjs.org/favicon.ico" alt="NextJS"
+            style="opacity: 0; transition: opacity 1s ease-in-out" />
         </div>
         <div>
           <h2 class="text-xl mb-1">NextJS</h2>
-          <p class="text-xs">支持服务端渲染和静态网站生成，简化路由、代码拆分等配置，提升开发效率和性能</p>
+          <p class="text-xs">
+            支持服务端渲染和静态网站生成，简化路由、代码拆分等配置，提升开发效率和性能
+          </p>
         </div>
       </li>
       <li class="relative pl-[5.5rem] py-3 bg-[#38bdf8] rounded-lg cursor-pointer duration-300 hover:scale-[105%]">
         <div
           class="absolute -left-4 top-1/2 -translate-y-1/2 flex justify-center items-center w-[5.5rem] aspect-square bg-[#e3e3e3] rounded-full shadow-lg">
-          <img src="https://www.tailwindcss.cn/favicons/favicon.ico?v=3" alt="Tailwind CSS" style="opacity: 0; transition: opacity 1s ease-in-out;" />
+          <img src="https://www.tailwindcss.cn/favicons/favicon.ico?v=3" alt="Tailwind CSS"
+            style="opacity: 0; transition: opacity 1s ease-in-out" />
         </div>
         <div>
           <h2 class="text-xl mb-1">Tailwind CSS</h2>
-          <p class="text-xs">只需书写 HTML 代码，无需书写 CSS ，即可快速构建美观的网站</p>
+          <p class="text-xs">
+            只需书写 HTML 代码，无需书写 CSS ，即可快速构建美观的网站
+          </p>
         </div>
       </li>
       <li class="relative pl-[5.5rem] py-3 bg-[#7ab461] rounded-lg cursor-pointer duration-300 hover:scale-[105%]">
         <div
           class="absolute -left-4 top-1/2 -translate-y-1/2 flex justify-center items-center w-[5.5rem] aspect-square bg-[#e3e3e3] rounded-full shadow-lg">
-          <img src="https://nodejs.org/static/images/favicons/favicon.png" alt="NodeJS" style="opacity: 0; transition: opacity 1s ease-in-out;" />
+          <img src="https://nodejs.org/static/images/favicons/favicon.png" alt="NodeJS"
+            style="opacity: 0; transition: opacity 1s ease-in-out" />
         </div>
         <div>
           <h2 class="text-xl mb-1">NodeJS</h2>
-          <p class="text-xs">一个 JavaScript 运行时环境，可以创建服务器、 Web 应用、命令行工具和脚本</p>
+          <p class="text-xs">
+            一个 JavaScript 运行时环境，可以创建服务器、 Web
+            应用、命令行工具和脚本
+          </p>
         </div>
       </li>
     </ul>
-    <a target="_blank" href="https://www.cnblogs.com/SRIGT" class="border rounded-full outline-none px-16 py-2 duration-300 hover:border-[#e91e63] hover:bg-[#e91e63]">更多博客</a>
+    <a target="_blank" href="https://www.cnblogs.com/SRIGT"
+      class="border rounded-full outline-none px-16 py-2 duration-300 hover:border-[#e91e63] hover:bg-[#e91e63] z-[5]">更多博客</a>
   </section>
 
   <!-- 联系 -->
-  <section class="w-full h-[100vh] bg-blue-500"></section>
+  <section class="relative w-full h-[100vh] flex flex-col items-center py-16">
+    <h1 class="text-[50px] font-bold tracking-wide">联系我</h1>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-around items-center w-4/5 text-[#201b19]">
+      <div class="relative aspect-square p-4 bg-[#dedede] overflow-hidden group">
+        <svg class="icon group-hover:-translate-y-full transition-transform duration-500 ease-in-out"
+          viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+          <path
+            d="M824.8 613.2c-16-51.4-34.4-94.6-62.7-165.3C766.5 262.2 689.3 112 511.5 112 331.7 112 256.2 265.2 261 447.9c-28.4 70.8-46.7 113.7-62.7 165.3-34 109.5-23 154.8-14.6 155.8 18 2.2 70.1-82.4 70.1-82.4 0 49 25.2 112.9 79.8 159-26.4 8.1-85.7 29.9-71.6 53.8 11.4 19.3 196.2 12.3 249.5 6.3 53.3 6 238.1 13 249.5-6.3 14.1-23.8-45.3-45.7-71.6-53.8 54.6-46.2 79.8-110.1 79.8-159 0 0 52.1 84.6 70.1 82.4 8.5-1.1 19.5-46.4-14.5-155.8z">
+          </path>
+        </svg>
+        <p
+          class="group-hover:-translate-y-[200%] absolute bottom-0 w-full text-center transition-transform duration-500 ease-in-out translate-y-full left-1/2 -translate-x-1/2">
+          QQ
+          <br />
+          <strong> 2474857452 </strong>
+        </p>
+      </div>
+      <div class="relative aspect-square p-4 bg-[#dedede] overflow-hidden group">
+        <svg class="icon group-hover:-translate-y-full transition-transform duration-500 ease-in-out"
+          viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+          <path
+            d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32z m-80.8 108.9L531.7 514.4c-7.8 6.1-18.7 6.1-26.5 0L189.6 268.9c-1.8-1.4-2.8-3.5-2.8-5.7 0-4 3.2-7.2 7.2-7.2h648.8c2.2 0 4.3 1 5.7 2.8 2.4 3.1 1.9 7.6-1.3 10.1z">
+          </path>
+        </svg>
+        <p
+          class="group-hover:-translate-y-[200%] absolute bottom-0 w-full text-center transition-transform duration-500 ease-in-out translate-y-full left-1/2 -translate-x-1/2">
+          Email
+          <br />
+          <strong> 2474857452@qq.com </strong>
+        </p>
+      </div>
+      <div class="relative aspect-square p-4 bg-[#dedede] overflow-hidden group">
+        <svg class="icon group-hover:-translate-y-full transition-transform duration-500 ease-in-out"
+          viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+          <path
+            d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9 23.5 23.2 38.1 55.4 38.1 91v112.5c0.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z">
+          </path>
+        </svg>
+        <p
+          class="group-hover:-translate-y-[200%] absolute bottom-0 w-full text-center transition-transform duration-500 ease-in-out translate-y-full left-1/2 -translate-x-1/2">
+          Github
+          <br />
+          <strong> https://github.com/SR1GT </strong>
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- 尾部 -->
   <footer class="text-center">
-    <p class="font-serif">©2024 <a target="_blank" href="https://github.com/SR1GT" class="font-bold font-sans">SR1GT</a>
-      all rights reserved.</p>
+    <p>
+      素材获取:
+      <a target="_blank" href="https://www.iconfont.cn/" class="underline">iconfont.cn</a>
+      |
+      <a target="_blank" href="https://unsplash.com/" class="underline">unsplash.com</a>
+      |
+      <a target="_blank" href="https://skillicons.dev/" class="underline">skillicons.dev</a>
+    </p>
+    <p class="font-serif">
+      ©2024
+      <a target="_blank" href="https://github.com/SR1GT" class="outline-none font-bold font-sans">
+        SR1GT
+      </a>
+      all rights reserved.
+    </p>
   </footer>
 
   <!-- 回到顶部 -->
   <button id="gotoTop" class="fixed right-[20px] bottom-[20px] bg-[#dedede] p-3 rounded-full outline-none"
-    style="opacity: 0; transition: opacity 1s ease-in-out;">
+    style="opacity: 0; transition: opacity 1s ease-in-out" name="回到顶部">
     <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
       <path
         d="M535.466667 241.066667c-12.8-8.533333-27.733333-8.533333-40.533334 0L183.466667 488.533333c-6.4 6.4-12.8 14.933333-12.8 23.466667 0 2.133333 0 6.4 2.133333 8.533333 2.133333 12.8 14.933333 21.333333 27.733333 21.333334h155.733334v322.133333c0 19.2 12.8 29.866667 32 29.866667h249.6c21.333333 0 34.133333-12.8 34.133333-29.866667v-320h151.466667c12.8 0 25.6-8.533333 27.733333-21.333333s0-25.6-8.533333-34.133334L535.466667 241.066667zM864 96h-704C142.933333 96 128 110.933333 128 128s14.933333 32 32 32h704c17.066667 0 32-14.933333 32-32s-14.933333-32-32-32z">
       </path>
     </svg>
   </button>
+
   <script src="./dist/bundle.js"></script>
 </body>
 

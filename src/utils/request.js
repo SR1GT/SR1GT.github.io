@@ -13,10 +13,11 @@ export async function getIP() {
 
 async function getLocation(ip) {
   await axios
-    .get(`http://ip-api.com/json/${ip}?lang=zh-CN`)
+    // .get(`http://ip-api.com/json/${ip}?lang=zh-CN`)
+    .get(`https://ipapi.com/ip_api.php?ip=${ip}`)
     .then((response) => {
       const data = response.data;
-      document.getElementById("location").innerHTML = data.country + data.city;
+      document.getElementById("location").innerHTML = data.region_name;
     })
     .catch((error) => {
       // console.log(error);
