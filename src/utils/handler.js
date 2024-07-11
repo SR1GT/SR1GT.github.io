@@ -8,13 +8,6 @@ export const navigationHandler = () => {
 };
 
 export const scrollHandler = () => {
-  const button = document.getElementById("gotoTop");
-  button.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
   const isScrolledToBottom = () => {
     const viewportHeight = window.innerHeight;
     const scrollPosition =
@@ -22,13 +15,30 @@ export const scrollHandler = () => {
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-    return scrollPosition > viewportHeight;
+    return scrollPosition > viewportHeight * 2 / 3;
   };
+  const button = document.getElementById("gotoTop");
+  button.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
   window.addEventListener("scroll", () => {
     if (isScrolledToBottom()) {
-      button.classList.remove("hidden");
+      button.style.opacity = 1;
     } else {
-      button.classList.add("hidden");
+      button.style.opacity = 0;
+    }
+  });
+};
+
+export const imageHandler = () => {
+  const images = document.querySelectorAll("img");
+  images.forEach((image) => {
+    image.addEventListener("load", () => (image.style.opacity = 1));
+    if (image.complete) {
+      image.style.opacity = 1;
     }
   });
 };

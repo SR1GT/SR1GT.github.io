@@ -1,9 +1,14 @@
-import { navigationHandler, scrollHandler } from "./utils/handler";
+import {
+  imageHandler,
+  navigationHandler,
+  scrollHandler,
+} from "./utils/handler";
 import { getIP } from "./utils/request";
 
 const mount = () => {
-  navigationHandler()
+  navigationHandler();
   scrollHandler();
+  imageHandler();
   getIP();
 };
 
