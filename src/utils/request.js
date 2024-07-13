@@ -7,20 +7,18 @@ export async function getIP() {
       getLocation(response.data.ip);
     })
     .catch((error) => {
-      console.log("获取IP失败");
+      console.log("获取IP失败: ", error);
     });
 }
 
 async function getLocation(ip) {
   await axios
-    // .get(`http://ip-api.com/json/${ip}?lang=zh-CN`)
-    .get(`https://ipapi.com/ip_api.php?ip=${ip}`)
+    .get(`http://ip-api.com/json/${ip}?lang=zh-CN`)
     .then((response) => {
       const data = response.data;
-      document.getElementById("location").innerHTML = data.region_name;
+      document.getElementById("location").textContent = data.regionName;
     })
     .catch((error) => {
-      // console.log(error);
-      console.log("获取地理位置失败");
+      console.log("获取地理位置失败: ", error);
     });
 }
